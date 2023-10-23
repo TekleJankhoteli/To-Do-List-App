@@ -1,38 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+/* main containers,title */
+
 .App {
   text-align: center;
+  background-color: #EA5959;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EA5959;
+  width: 100%;
+  height: 100vh;
+}
+
+.mainContent{
+  display: flex;
+  width: 900px;
+  max-width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+ 
+}
+
+.buttonContainer{
+  display: flex;
+  width: 200px;
   flex-direction: column;
   align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  padding-bottom: 80px;
+  border-right: 1px solid #D8D8D8;
+
 }
 
-.App-link {
-  color: #61dafb;
+.inputAndTodolist{
+  display: flex;
+  flex-direction: column;
+ margin-left: 50px;
+ margin-top: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  color: #000;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 25px;
+  text-align:start ;
 }
+
+/* category buttons */
+.selectedCategory{
+  color: #EA5959;
+  border: none;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  background:none;
+  cursor: pointer;
+}
+
+.notSelected{
+  border: none;
+  color: #525252;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  background:none;
+  cursor: pointer;
+}
+
+
+/* button for completed todos */
+.compleateTodo{
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #EA5959;
+  background-color: white;
+}
+.completed {
+  background-color: #EA5959;
+  cursor: pointer;
+}
+
+.notCompleted{
+  cursor: pointer;
+}
+/* delete image */
+.deleteImg{
+  display: none;
+}
+li:hover .deleteImg {
+  display: inline;
+  cursor: pointer;
+}
+
+/* input and todo list */
+.input{
+  width: 621px;
+  height: 47px;
+  border-radius: 8px;
+  background: #F3F3F3;
+  border: none;
+  color: #B5B5B5;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #5A5A5A;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+li{display: flex;
+align-items: center;
+gap: 20px;
+list-style: none;
+}
+
+li span{
+  width: 115px;
+  height: 24px;
+  border-radius: 4px;
+  background: #EA5959;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+} 
+
